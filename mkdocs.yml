@@ -19,3 +19,5 @@ theme:
 
 nav:
   - Inicio: index.md
+  - Diario:
+      - Día 1: diario/dia-01.md
