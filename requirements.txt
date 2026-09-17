@@ -1,1 +1,2 @@
 mkdocs-material
+mujoco==3.3.7
