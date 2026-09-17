@@ -22,6 +22,16 @@ Mi profesor me mencionó dos posibles brazos: el **UR5e** y el **Dobot Magician*
 3. Verifiqué que el modelo carga y simula sin errores: 6 grados de libertad, 6 actuadores, y las 6 articulaciones esperadas (`shoulder_pan`, `shoulder_lift`, `elbow`, `wrist_1`, `wrist_2`, `wrist_3`).
 4. Añadí `mujoco==3.3.7` a `requirements.txt` para que el entorno sea reproducible, e ignoré `venv/` en `.gitignore`.
 
+## Cámara en la muñeca
+
+Para más adelante (visión artificial, control visual) necesitaba comprobar cómo añadir una cámara al modelo. Fui probando distintas configuraciones de posición y orientación en el `body` de la muñeca (`wrist3`) hasta dar con una que apunta hacia el eje de la herramienta:
+
+```xml
+<camera name="wrist_cam" mode="fixed" pos="0 0.18 0" zaxis="0 -1 0" fovy="45"/>
+```
+
+La cámara se ve en el visor (`simulate` / `python -m mujoco.viewer`) seleccionándola en el desplegable de la pestaña *Rendering* → *Camera*, o cicleando con `[` / `]`. Comprobado que aparece como `wrist_cam` y renderiza correctamente desde la muñeca del robot.
+
 ## Resultado
 
 Modelo del UR5e funcionando en `models/ur5e/scene.xml`, cargable con:

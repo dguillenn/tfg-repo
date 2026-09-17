@@ -112,6 +112,7 @@
                   <geom material="linkgray" mesh="wrist3" class="visual"/>
                   <geom class="eef_collision" pos="0 0.08 0" quat="1 1 0 0" size="0.04 0.02"/>
                   <site name="attachment_site" pos="0 0.1 0" quat="-1 1 0 0"/>
+                  <camera name="wrist_cam" mode="fixed" pos="0 0.18 0" zaxis="0 -1 0" fovy="45"/>
                 </body>
               </body>
             </body>
