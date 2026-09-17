@@ -1,0 +1,21 @@
+site_name: TFG Daniel Guillén
+repo_url: https://github.com/dguillenn/tfg-repo
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Modo oscuro
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+
+nav:
+  - Inicio: index.md
